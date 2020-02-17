@@ -7,15 +7,15 @@
    typing in OCaml, including:
 
      Algebraic data types
-     Using ADTs to enforce invariants
-     Implementing polymorphic ADTs
+     Using algebraic data types to enforce invariants
+     Implementing polymorphic algebraic data types
  *)
 
 (*======================================================================
                          Part 2: Binary trees
 
 Binary trees are a data structure composed of nodes that store a value
-from some base type (say, int) as well as a left and a right
+from some base type (say, `int`) as well as a left and a right
 subtree. To well-found this recursive definition, a binary tree can
 also be a leaf. For purpose of this lab, we'll say that the leaves
 store no further data, though many definitions of binary trees do
@@ -52,8 +52,9 @@ let find = fun _ -> failwith "find not implemented" ;;
 (*......................................................................
 Exercise 10: Define a function `min_value`, such that `min_value tree`
 returns the minimum value stored in `tree` as an option type, and
-`None` if the tree has no stored values. Use the `<` operator for
-comparing values stored in the nodes of the tree.
+`None` if the tree has no stored values. For purposes of determining
+the minimum, use the `<` operator for comparing values stored in the
+nodes of the tree.
 ......................................................................*)
 
 let min_value (tree : 'a bintree): 'a option =
