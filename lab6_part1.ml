@@ -89,9 +89,10 @@ returns a `bool` indicating whether or not the string represents a
 valid zip code. You may find the function `Stdlib.int_of_string_opt`
 and the `String` or `Str` modules to be useful.
 
-You do not have to worry about properly handling strings interpreted
-as non-base-10 numbers. For example, `0x100` (hexadecimal) may or may
-not pass your test but `abcde` definitely should not.
+(For the purpose of defining a "valid zip code", you don't have to
+worry about what the function does on strings interpreted as
+non-base-10 numbers. For example, `0x100` (hexadecimal) may or may not
+pass your test but `abcde` definitely should not.
 ......................................................................*)
 
 let valid_zip = fun _ -> failwith "valid_zip not implemented" ;;
@@ -151,7 +152,8 @@ Write a function `named_neighbors` that, given two names (strings
 again) and a list of `town_records`, searches though the list to
 determine if the two people are neighbors, as defined above, and
 returns a `bool`. Return a `Failure` exception in the event that
-either of the names does not appear in the list of records.
+either of the names does not appear in the list of records. You can
+assume that no two town records have the same name.
 ......................................................................*)
 
 let named_neighbors =
